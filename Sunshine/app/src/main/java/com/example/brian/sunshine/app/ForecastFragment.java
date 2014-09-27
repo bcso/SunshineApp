@@ -71,7 +71,7 @@ public class ForecastFragment extends Fragment {
 
         String unit = prefs.getString(
                 getString(R.string.pref_units_key),
-                getString(R.string.pref_units_default)
+                getString(R.string.pref_units_label_metric)
         );
 
         task.execute(locPref, unit);
