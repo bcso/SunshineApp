@@ -24,8 +24,40 @@ public class MainActivity extends ActionBarActivity {
                     .add(R.id.container, new ForecastFragment())
                     .commit();
         }
+        Log.v(LOG_TAG, "Just ran: onCreate");
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.v(LOG_TAG, "Just ran: onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.v(LOG_TAG, "Just ran: onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.v(LOG_TAG, "Just ran: onPause");
+    }
+
+
+    @Override
+    protected void onStop() {
+        super.onPause();
+        Log.v(LOG_TAG, "Just ran: onStop");
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onPause();
+        Log.v(LOG_TAG, "Just ran: onDestroy");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
